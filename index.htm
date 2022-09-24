@@ -1,125 +1,381 @@
-<html><!-- ©2020~2022,the Bidirectional Laugh of Ambivalent GOV --><head>
-    <title>BLA-Citizens</title>  
-    <meta name="description" content="BLA国Citizens list(live update)-BLAgov">
-    </head>
+<html><!-- ©2020~2022,the Bidirectional Laugh of Ambivalent GOV --><!--meta setup and some css--><head>
+    <link rel="icon" href="favicon.ico">
+         <meta name="description" content="
+This is the Official website for BLA国`s goverment(the Bidirectional Laugh of Ambivalent)(Under construction）-BLAgov">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- charset-->
+    <meta charset="“UTF-8”">
     
-    <body style="background-color:#ffffcc;margin-left: 8px;"> 
-   <!-- outer content start -->
-	<a style="text-decoration:none" href="https://blablablagov.github.io/home/" target="_blank"><h1 style="
-    margin-bottom: 4px;
-    margin-top: 2px;font-size:40px
-">
-	<img src="国徽2.png" style="
-    height: 37px;
-    width: 37px;
-"> the Bidirectional Laugh of Ambivalent
-	</h1></a>
+<title>Bidirectional Laugh of Ambivalent</title>
         
-	<hr style="
-    margin-top: 0px;
-">
-<!-- inner content start -->
-    <b style="color: #c3871a;font-family:arial;margin-left: 24px;">BLA国Citizens list (live update)</b>
-    
-    <!--Citizens list table start-->
-<style>
-    /*Citizens List Table style*/
-table, th, td {
-  border: 1px solid #adad79;
-  border-collapse: collapse;
+        <style>
+            /*Text selection color*/
+            ::selection {
+  color: #FFBF00;
+  background:#42d5760f;
 }
-    td {
-    padding-left: 4px;
-    padding-right: 4px;
-    padding-top: 2px;
-    padding-bottom: 2px;
-    }
-    th {
-    padding-left: 4px;
-    padding-right: 4px;
-    padding-top: 4px;
-    padding-bottom: 4px;
-    background-color:#dbdba2;
-    }
-</style><p style="font-family:arial;margin-left: 24px;">
-  <table>
-<caption style="color: #29a329;">Citizens list
-</caption>
-<tbody><tr style="color: #af7918;">
-<th>|--No.--|</th>
-    <th>|------Name------|</th>
-<th>|----Joined(UTC+08:00)/expire at----|</th>
-<th>|----Description----|</th></tr>
-<tr>
-<td>00001</td>
-<td>Star笑</td>
-    <td>A.D 2020y9m15d 16h00min/na</td>
-    <td>L-1公民</td> </tr>
-    <tr>
-        <td>00002</td>
-        <td>Vincent char</td>
-        <td>A.D 2020y9m15d 16h02min/na</td>
-        <td>	L-1公民</td>
-      </tr>
-    <tr>
-        <td>00003</td>
-        <td>Eunice Swift</td>
-        <td>A.D 2020y9m15d 16h07min/na*</td>
-        <td>L-2公民*</td>
-</tr>
-    <tr>
-        <td>00004</td>
-        <td>Tina Lancaster</td>
-        <td>A.D 2020y9m15d 21h00min/na</td>
-        <td>L-1公民</td>
-    </tr>
-    <tr>
-        <td>00005</td>
-        <td>Miss.who</td>
-        <td>A.D 2020y9m16d 12h10min/na</td>
-        <td>	L-1公民</td>
-    </tr>
-<tr>
-        <td>00006</td>
-        <td>Cylin</td>
-        <td>A.D 2020y9m18d 12h19min/na</td>
-        <td>L-1公民</td></tr>
-<tr>
-        <td>00007</td>
-    <td>Jackson </td>
-        <td>A.D 2020y9m23d 04h40min/na</td>
-    <td>L-1公民</td>
-</tr>
-    <tr>
-        <td>00008</td>
-        <td>Odis Lin</td>
-        <td>A.D 2022y3m10d 07h24min/na</td>
-        <td>L-1公民</td></tr><tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td></tr>
-</tbody></table></p>
-<!--Citizens list table end-->
-    <!-- inner content end -->
-     <hr>
-     <img src="国旗.png" style="
+            /*--side view ccs start--*/
+/*err what does this box thingie do?*/            
+* {
+  box-sizing: border-box;
+}
+/* The grid:equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 25%;
+  padding: 10px;
+    
+    padding-left: 2px;
+    padding-right: 2px;
+
+}
+
+/* Style the images inside the grid */
+.column img {
+  opacity: 1; 
+  cursor: pointer; 
+}
+
+.column img:hover {
+  opacity: 0.84;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* The expanding image container */
+.container {
+  position: relative;
+  display: none;
+}
+
+/* Expanding image text */
+#imgtext {
+  position: absolute;
+  bottom: 15px;
+  right: 14px;
+  color: rgb(255 255 255 / 74%);
+  font-size: 20px;
+}
+
+/* Closable cross inside the expanded image */
+.closebtn {
+  position: absolute;
+  top: 4px;
+  right: 10px;
+  color: rgb(133 255 114 / 40%);
+  font-size: 35px;
+  cursor: pointer;
+}
+</style>
+        <!--side view ccs end-->
+    </head>
+<body style="background-color:#e6ffff;">
+	<h1 style="color:black;font-size:40px;margin-top: 0px;margin-bottom: 0px;font-family:Times New Roman;"><img src="国徽.png" style="
     height: 40px;
-   /*width: 59px;*/
+    width: 44px;
+    "><i style="font-size:24px;color:#4d4d4d;">the</i>B<span style="color:#4d4d4d;">idirectional</span>  L<span style="color:#4d4d4d;">augh</span> <i style="font-size:24px;color:#4d4d4d;">of </i>A<span style="color:#4d4d4d;">mbivalent</span></h1>
+    <p style="color:blue;font-size:20px;margin-top: 0px;margin-bottom: 10px;"><span style="color: hsl(177deg 100% 48%);">Motto:</span>"We seek for the funness of playing together freely."</p>
+<hr style="
+           height: 2px;
+           border-bottom-width: 0px;
+           border-width:0;
+           color:gray;
+           background-color:black;
+           ">
+        <div style="
+    margin-left: 24px;
+">
+ <!-- inner content start -->
+<!-- info banner -->
+<marquee style="
+          color: #db2d2d;
+          font-size:16px;
+          margin-top: 0px;
+          font-family:
+          arial;
+          left: 0px;
+          ">ℌ𝔞𝔭𝔭𝔶 🎈2𝔫𝔡🎈 🎊𝔞𝔫𝔫𝔦𝔳𝔢𝔯𝔰𝔞𝔯𝔶🎊 𝔬𝔣 𝐵𝐿𝒜!! (sorry a little late:) <span style="color: #db8d2d;">(enter in your browser's Console "start();" to enjoy the confetti effect foreveeer. but i don't have autostop code for now, "stop();" to stop again.)</span> |<span style="color: #2d7bdb;">&nbsp;&nbsp;This is the Official website for BLA国`s goverment.  Under construction�(don't ask, cus everyone is laaazy!)</span></marquee>
+          
+            <!--tooltip style-->
+<style>
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: white;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+</style>
+        <!--side bar start-->
+<style>
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #2196F3;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: #2196F3;
+}
+
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+</style>
+    
+        <!--side bar end-->
+<style>
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #2196F3;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: #2196F3;
+}
+
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+</style>
+    
+    <div class="sidenav" style="
+  border-radius: 4px;
+  position: fixed;
+  z-index: 1;
+  background: #67ffff;
+  overflow-x: hidden;
+  padding: 4px 0;
+  margin-left: 0px;
+  width: 26px;
+  left: 4px;
+  right: auto;
+  top: 100px;
+  ">
+  
+  <abbr title="Links"><a href="#Links" style="margin-left: 0px;width: 24px;left: 4px;right: auto;padding-left: 0px;">📎</a></abbr>
+<abbr title="News">
+<a href="#News" style="margin-left: 0px;width: 24px;left: 4px;right: auto;padding-left: 0px;">📰</a></abbr>
+  <abbr title="landscapePic"><a href="#landscapePic" style="margin-left: 0px;width: 24px;left: 4px;right: auto;padding-left: 0px;">📷</a></abbr>
+</div>
+<!--side bar end-->
+	<a id="Links"><p style="
+    margin-bottom: 0px;
+    font-family:arial;
+    font-size: 19px;
+    color: #c4c400;
+    ">Web Content Links<span style="font-size:17px;">(目录)</span>：</p></a>
+
+
+   <p style="
+    margin-top: 4px;
+    font-family:
+    arial;
+    ">
+    <a href="https://blablablagov.github.io/about/" target="_self" style="
+    margin-top: 0px;
+    margin-left: 1px;
+    margin-right: 1px;
+    padding-right: 2px;
+    padding-left: 2px;
+    margin-bottom: 1px;
+    font-size:19px
+    ">-ℹAbout</a>
+
+       <a href="https://blablablagov.github.io/Citizens" target="_self" style="
+    margin-top: 0px;
+    margin-left: 1px;
+    margin-right: 1px;
+    padding-right: 2px;
+    padding-left: 2px;
+    margin-bottom: 1px;
+    font-size:19px">-👥Citizens</a>
+ <a href="https://blablablagov.github.io/map" target="_self" style="
+    margin-top: 0px;
+    margin-left: 1px;
+    margin-right: 1px;
+    padding-right: 2px;
+    padding-left: 2px;
+    margin-bottom: 1px;
+    font-size:18px ">-🌏National territory Map</a>
+     
+ <a href="https://blablablagov.github.io/resources" target="_self" style="
+    margin-top: 0px;
+    margin-left: 1px;
+    margin-right: 1px;
+    padding-right: 2px;
+    padding-left: 2px;
+    margin-bottom: 1px;
+    font-size: 18px;
+    ">-🎁Resources</a>
+<a href="https://blablablagov.github.io/bia" target="_self" style="
+    font-family:Courier;
+    margin-top: 0px;
+    margin-left: 1px;
+    margin-right: 1px;
+    padding-right: 2px;
+    padding-left: 2px;
+    margin-bottom: 1px;
+    font-size:20px ">-😎BIA</a></p>
+        
+        <a id="News"><p style="
+    margin-bottom: 0px;
+    font-family:arial;
+    font-size: 19px;
+    color: #c4c400;
+    ">National News/Announcements<span style="font-size:17px;">(国家新闻/公告）</span>：</p></a>
+<!--News contant start-->
+<p style="
+    margin-bottom: 0px;
+    font-family:arial;
+    font-size: 19px;
+    color: #38728e;
+    margin-left: 24px;
+    margin-top: 10px;
+    "><span style="font-family:Courier New;
+    font-size: 16px;">NQ-4 2020y12m10d N.0001</span>
+    <br>New land claim:Little Tree hill●1.0527㎢ Around Lat: 30°20'31.62"N,long:120°22'49.16"E</p><a id="landscapePic"></a><p style="margin-bottom: 0px;
+"> <a style="font-family:arial;font-size:18px;color: #c4c400;">Country landscape<span style="font-size:16px;">(国家风景)</span>:</a></p>
+        
+        
+<!-- pic ga start-->
+            <div class="row">
+  <div class="column">
+    <img src="Rock(close).jpg" alt="Little stone hill" style="width:100%" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="小树丘.jpg" alt="Little Tree hill" style="width:100%" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="Far full tree.jpg" alt="Little stone hill" style="width:100%" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="M.B. Sign.jpg" alt="A sign" style="width:100%" onclick="myFunction(this);">
+  </div>
+</div>
+
+<div class="container" style="display: none; padding-bottom: 8px;">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">×</span>
+  <img id="expandedImg" style="width:100%" src="https://blablablagov.github.io/home/M.B.%20Sign.jpg">
+  <div id="imgtext">A sign</div>
+</div>
+
+<script>
+function myFunction(imgs) {
+  var expandImg = document.getElementById("expandedImg");
+  var imgText = document.getElementById("imgtext");
+  expandImg.src = imgs.src;
+  imgText.innerHTML = imgs.alt;
+  expandImg.parentElement.style.display = "block";
+}
+</script>
+        
+
+
+
+
+</div>
+      <!-- inner content end -->  
+   <!--test -->
+<button onclick="ShowHideFunc()" style="border-radius: 4px;    border-bottom-left-radius: 0px;border-bottom-right-radius: 0px;
+">Show/hide more site info</button><div id="myDIV" style="border-radius: 0px 4px 4px; display: none; background-color: rgba(103, 202, 255, 0.4); border-style: groove; margin-bottom: 0px;">
+<li style="
+    color: #dc8402;
+    ">
+   This static website is established on 2020A.D.9m24d by L-1 Citizen star笑. Maintained(mostly) by star笑.</li>
+<li style="
+    color: rgb(220 132 2);
+    ">This website depends on the working service of "GitHub, Inc."And might be hacked.Do not use for legal verification,just for easy access.</li>
+<li style="
+    color: rgb(220 132 2);
+    ">This website is coded on a 1366*768px screen. </li>
+    <li style="
+    color: rgb(220 132 2);
+    ">BLABLABLAgov does not use "cookies" on it`s websites</li>
+</div>
+<script>
+function ShowHideFunc() {
+  var x = document.getElementById("myDIV");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+</script><!--test -->
+
+
+
+
+
+<hr style="
+    margin-bottom: 4px;
+    margin-top: 4px;
+">
+    <img src="国旗.png" style="
+    height: 36px;
+    width: 59px;
     position: absolute;
 ">
-     <p style=" /*last <P>*/
+     <p style="
     margin-top: 2px;
     margin-bottom: 4px;
     font-family:Courier New;
-    margin-left: 70px;
+    margin-left: 64px;
     ">
-    <span style="
-    font-size: 19px;
-    ">Updated on:2022y09m17d</span>
-    <br><b style="font-size: 21px;margin-top: 2px;font-family:Courier New;">
-        ©2020~2022,the Bidirectional Laugh of Ambivalent GOV</b></p>
+    LastUpdate:2022y/09m/24d 
+    <b style="
+    margin-top: 2px;
+    font-family:Courier New">
+        <br>©2020~2022,the Bidirectional Laugh of Ambivalent GOV</b></p>
+<!-- outer content end -->
+    <!-- anniversry confetti effct start-->
+<script src="confetti.js"></script>
+<script>
 
+        // start
+        const start = () => {
+            setTimeout(function() {
+                confetti.start()
+            }, 915); // 1000 is time that after 1 second start the confetti ( 1000 = 1 sec)
+        };
+
+        //  Stop
+        const stop = () => {
+            setTimeout(function() {
+                confetti.stop()
+            }, 6000); // 4000 is time that after 4 second stop the confetti ( 4000 = 4 sec)
+        };
+
+        start();
+        stop();
+    </script> 
+    <!-- anniversry confetti effct end-->
 
 
 </body></html>
